@@ -5,28 +5,29 @@ margin: auto;
 padding: 20px;
 text-align: center;
 font-family: Arial, sans-serif;
-
 }
 
 p{
     font-size: 20px;
     text-align: center;
     font-family: Arial, sans-serif;
-
+    
+    margin: 0px;
+    padding: 0px;
 }
 
 #list{
     border: 10px solid black ;
     margin: 20px ;
- width: 300px;
+    width: 300px;
     padding: 20px;
     font-family: Arial, sans-serif;
 }
 
 #contact{
     border: 10px solid black ;
-
- width: 300px;
+    margin: 20px;
+    width: 300px;
     padding: 20px;
     font-family: Arial, sans-serif;
 }
