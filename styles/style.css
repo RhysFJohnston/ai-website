@@ -9,7 +9,6 @@ font-family: Arial, sans-serif;
 
 #Welcome-Para{
     margin-top: 20px;
-    
 }
 
 p{
@@ -21,7 +20,7 @@ p{
     padding: 0px;
 }
 
-#list{
+#AIList{
     border: 10px solid black ;
     margin: 20px ;
     width: 300px;
