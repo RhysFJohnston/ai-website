@@ -1,6 +1,6 @@
 #header{
 border: 10px solid black ;
-    background-color: #f2f2f2;
+background-color: #f2f2f2;
 margin: auto;
 padding: 20px;
 text-align: center;
@@ -31,7 +31,7 @@ p{
     font-family: Arial, sans-serif;
 }
 
-.seperate{
+.separate{
     display: flex;
     justify-content: space-between;
 }
