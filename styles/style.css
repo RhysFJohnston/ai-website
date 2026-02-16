@@ -51,10 +51,45 @@ p{
     justify-content: space-between;
 }
 
-#description{
-    border: 10px solid black ;
-    margin: 20px;
-    width: 500px;
+.description{
+  border: 10px solid black ;
+    margin: 20px ;
+    width: 600px;
     padding: 20px;
     font-family: Arial, sans-serif;
+    height: 300px;
+}
+
+#gpt{
+    border: 10px solid black ;
+    margin-left: 1000px;
+    margin-top: -230px;
+    height: 300px;
+    width: 400px;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    
+    
+}
+
+.creator{
+    border: 10px solid black ;
+    margin-top: 20px;
+    margin: 20px ;
+    width: 200px;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    
+}
+
+#claude{
+    border: 10px solid black ;
+    margin-left: 1000px;
+    margin-top: -230px;
+    height: 300px;
+    width: 400px;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    
+    
 }
