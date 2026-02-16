@@ -9,6 +9,7 @@ font-family: Arial, sans-serif;
 
 #Welcome-Para{
     margin-top: 20px;
+
 }
 
 p{
@@ -48,4 +49,12 @@ p{
 .separate{
     display: flex;
     justify-content: space-between;
+}
+
+#description{
+    border: 10px solid black ;
+    margin: 20px;
+    width: 500px;
+    padding: 20px;
+    font-family: Arial, sans-serif;
 }
