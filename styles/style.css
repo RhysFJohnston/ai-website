@@ -52,7 +52,7 @@ p{
 }
 
 .description{
-  border: 10px solid black ;
+    border: 10px solid black ;
     margin: 20px ;
     width: 600px;
     padding: 20px;
@@ -61,15 +61,12 @@ p{
 }
 
 .image{
- border: 10px solid black ;
-    margin-left: 1000px;
-    margin-top: -230px;
+    border: 10px solid black ;
+    margin-top: 30px;
     height: 300px;
     width: 400px;
     padding: 20px;
     font-family: Arial, sans-serif;
-    
-    
 }
 
 .creator{
@@ -79,6 +76,5 @@ p{
     width: 200px;
     padding: 20px;
     font-family: Arial, sans-serif;
-    
 }
 
