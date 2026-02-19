@@ -88,3 +88,10 @@ could fit in one line rather than many diff ones. - Rhys
     width: 300px;
 }
 
+#claudeImage{
+    width: 600px;
+    height: 200px; 
+    transform: translate(-40px, 30px);
+}
+
+
