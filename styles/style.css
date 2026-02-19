@@ -67,6 +67,7 @@ p{
     width: 400px;
     padding: 20px;
     font-family: Arial, sans-serif;
+    transform: translateX(-40px);
 }
 
 .creator{
@@ -76,5 +77,13 @@ p{
     width: 200px;
     padding: 20px;
     font-family: Arial, sans-serif;
+}
+
+/*
+Added an Id for this specfic creator heading so that the text
+could fit in one line rather than many diff ones. 
+*/
+#MidjourneyTitle{
+    width: 300px;
 }
 
