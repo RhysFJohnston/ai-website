@@ -65,6 +65,7 @@ p{
     margin-top: 30px;
     height: 300px;
     width: 400px;
+    height: 300px;
     padding: 20px;
     font-family: Arial, sans-serif;
     transform: translateX(-40px);
@@ -81,7 +82,7 @@ p{
 
 /*
 Added an Id for this specfic creator heading so that the text
-could fit in one line rather than many diff ones. 
+could fit in one line rather than many diff ones. - Rhys 
 */
 #MidjourneyTitle{
     width: 300px;
