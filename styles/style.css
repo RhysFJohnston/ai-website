@@ -44,6 +44,14 @@ p{
     width: 300px;
     padding: 20px;
     font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#contact-message{
+    margin: 20px;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    text-align: center;
 }
 
 .separate{
