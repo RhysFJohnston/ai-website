@@ -20,6 +20,38 @@
         </p>
         </div>
 
+
+<input type="text" id="searchBox" placeholder="Search task (e.g. maths, coding)">
+<button onclick="searchAI()">Search</button>
+<script>
+function searchAI() {
+    let input = document.getElementById("searchBox").value.toLowerCase();
+
+    if (input.includes("math") || input.includes("maths") || input.includes("equations")) {
+        window.location.href = "ChatGPT.html";
+    }
+
+    else if (input.includes("code") || input.includes("programming") || input.includes("debug")) {
+        window.location.href = "claude.html";
+    }
+
+    else if (input.includes("research") || input.includes("search") || input.includes("sources")) {
+        window.location.href = "perplexity.html";
+    }
+
+    else if (input.includes("image") || input.includes("art") || input.includes("picture")) {
+        window.location.href = "Midjourney.html";
+    }
+
+    else if (input.includes("study") || input.includes("notes") || input.includes("revision")) {
+        window.location.href = "NotebookLM.html";
+    }
+
+    else {
+        alert("No matching AI found. Try words like maths, coding, images, study...");
+    }
+}
+</script>
         <section class="separate">
         <div id = "AIList">
             <h2>Recommended AI Tools</h2>
@@ -93,5 +125,10 @@
     
     </section>
 
+
+
+
+</body>
+</html>
     </body>
 </html>
