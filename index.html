@@ -20,36 +20,62 @@
         </p>
         </div>
 
-
+<div class="search">
 <input type="text" id="searchBox" placeholder="Search task (e.g. maths, coding)">
-<button onclick="searchAI()">Search</button>
+<button id="button"onclick="searchAI()">Search</button>
+</div>
 <script>
+
+
+
 function searchAI() {
-    let input = document.getElementById("searchBox").value.toLowerCase();
 
-    if (input.includes("math") || input.includes("maths") || input.includes("equations")) {
-        window.location.href = "ChatGPT.html";
-    }
+let input = document.getElementById("searchBox").value.toLowerCase();
 
-    else if (input.includes("code") || input.includes("programming") || input.includes("debug")) {
-        window.location.href = "claude.html";
-    }
+if (input.includes("math") || input.includes("maths") || input.includes("equation") || input.includes("logic") || input.includes("reasoning")) {
+    window.location.href = "OpenAI.html";
+}
 
-    else if (input.includes("research") || input.includes("search") || input.includes("sources")) {
-        window.location.href = "perplexity.html";
-    }
+else if (input.includes("code") || input.includes("coding") || input.includes("programming") || input.includes("debug") || input.includes("developer") || input.includes("software") || input.includes("app") || input.includes("website") || input.includes("debugging")) {
+    window.location.href = "claude.html";
+}
 
-    else if (input.includes("image") || input.includes("art") || input.includes("picture")) {
-        window.location.href = "Midjourney.html";
-    }
+else if (input.includes("research") || input.includes("search") || input.includes("sources") || input.includes("information")) {
+    window.location.href = "perplexity.html";
+}
 
-    else if (input.includes("study") || input.includes("notes") || input.includes("revision")) {
-        window.location.href = "NotebookLM.html";
-    }
+else if (input.includes("image") || input.includes("art") || input.includes("picture") || input.includes("drawing")) {
+    window.location.href = "Midjourney.html";
+}
 
-    else {
-        alert("No matching AI found. Try words like maths, coding, images, study...");
-    }
+else if (input.includes("study") || input.includes("notes") || input.includes("revision") || input.includes("learning") || input.includes("pdf")) {
+    window.location.href = "NotebookLM.html";
+}
+
+else if (input.includes("privacy") || input.includes("private") || input.includes("local") || input.includes("offline")) {
+    window.location.href = "Llama.html";
+}
+
+else if (input.includes("document") || input.includes("long text") || input.includes("large file") || input.includes("context")) {
+    window.location.href = "Gemini.html";
+}
+
+else if (input.includes("news") || input.includes("twitter") || input.includes("x") || input.includes("social media") || input.includes("trending")) {
+    window.location.href = "Grok.html";
+}
+
+else if (input.includes("video") || input.includes("youtube") || input.includes("create video") || input.includes("video generator")) {
+    window.location.href = "InVideo.html";
+}
+
+else if (input.includes("chat") || input.includes("help") || input.includes("question") || input.includes("ideas") || input.includes("brainstorm")) {
+    window.location.href = "ChatGPT.html";
+}
+
+else {
+    alert("No matching AI found. Try searching for things like coding, research, video, study, maths, etc.");
+}
+
 }
 </script>
         <section class="separate">
