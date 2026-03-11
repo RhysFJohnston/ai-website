@@ -1,3 +1,11 @@
+<!--
+I changed a few things on this page, including:
+- Reworked the search bar to be a bit better and centered
+- Changed the if/else logic to a const array, easier to search and edit keywords
+
+- Tayler
+-->
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -10,117 +18,113 @@
     <body>
     
         <div class = "header">
-            <h1>ChooseMyAI | Find The Best AI Tools For You</h1>
+            <h1>ChooseMyAI</h1>
+        </div>
+
+        <div class = "subheading">
+            <h2>Find The Best AI Tools For You</h2>
         </div>
 
         <div id ="Welcome-Para">
         <p>
-            ChooseMyAI is a platform deisgned with the intention to help students and professionals choose the correct AI tools for studying, coding, writing and generating content etc.
-            ChooseMyAI will guide you in finding the best AI model suited for your tasks. 
+            ChooseMyAI is a platform deisgned with the intention to help everyone choose the most efficienct AI tools for a variety of tasks, including: studying, coding, video generation, image generation, research, and many more. With the rise of AI tools, it can be hard to find the best one for your needs, as there are so many AI tools that are designed for different purposes. ChooseMyAI will guide you in finding the best AI model suited for your tasks. 
         </p>
         </div>
 
-<div class="search">
-<input type="text" id="searchBox" placeholder="Search task (e.g. maths, coding)">
-<button id="button"onclick="searchAI()">Search</button>
+<div class="search-container">
+    <input type="text" id="searchBox" placeholder="Search for a task! (e.g. maths, coding, social media)">
+    <button id="searchButton" onclick="searchAI()">Search</button>
 </div>
+
 <script>
-
-
-
 function searchAI() {
+    // Grabs the search box value and makes sure it isnt empty and makes it lowercase for easier searching
+    const input = document.getElementById("searchBox").value.trim().toLowerCase();
+    
+    if (input === "") {
+        alert("Please enter a task to search for!");
+        return;
+    }
 
-let input = document.getElementById("searchBox").value.toLowerCase();
+    // AI Tool Data Array, much easier for us to edit because we can just add the keywords to the array
+    const tools = [
+        { url: "OpenAI.html", keywords: ["math", "maths", "equation", "logic", "reasoning"] },
+        { url: "claude.html", keywords: ["code", "coding", "programming", "debug", "developer", "app", "website"] },
+        { url: "perplexity.html", keywords: ["research", "search", "sources", "information"] },
+        { url: "Midjourney.html", keywords: ["image", "art", "picture", "drawing"] },
+        { url: "NotebookLM.html", keywords: ["study", "notes", "revision", "learning", "pdf"] },
+        { url: "Llama.html", keywords: ["privacy", "private", "local", "offline"] },
+        { url: "Gemini.html", keywords: ["document", "long text", "large file", "context"] },
+        { url: "Grok.html", keywords: ["news", "twitter", "x", "social media", "trending"] },
+        { url: "InVideo.html", keywords: ["video", "youtube", "create video"] },
+        { url: "ChatGPT.html", keywords: ["chat", "help", "question", "ideas", "brainstorm"] }
+    ];
 
-if (input.includes("math") || input.includes("maths") || input.includes("equation") || input.includes("logic") || input.includes("reasoning")) {
-    window.location.href = "OpenAI.html";
+    // 3. Logic to find the match
+    const match = tools.find(tool => 
+        tool.keywords.some(keyword => input.includes(keyword))
+    );
+
+    // 4. Action
+    if (match) {
+        window.location.href = match.url;
+    } else {
+        alert("No matching AI found. Try 'coding', 'math', or 'video'.");
+    }
 }
 
-else if (input.includes("code") || input.includes("coding") || input.includes("programming") || input.includes("debug") || input.includes("developer") || input.includes("software") || input.includes("app") || input.includes("website") || input.includes("debugging")) {
-    window.location.href = "claude.html";
-}
+// 5. Bonus: Make the "Enter" key work too!
+document.getElementById("searchBox").addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        searchAI();
+    }
+});
 
-else if (input.includes("research") || input.includes("search") || input.includes("sources") || input.includes("information")) {
-    window.location.href = "perplexity.html";
-}
-
-else if (input.includes("image") || input.includes("art") || input.includes("picture") || input.includes("drawing")) {
-    window.location.href = "Midjourney.html";
-}
-
-else if (input.includes("study") || input.includes("notes") || input.includes("revision") || input.includes("learning") || input.includes("pdf")) {
-    window.location.href = "NotebookLM.html";
-}
-
-else if (input.includes("privacy") || input.includes("private") || input.includes("local") || input.includes("offline")) {
-    window.location.href = "Llama.html";
-}
-
-else if (input.includes("document") || input.includes("long text") || input.includes("large file") || input.includes("context")) {
-    window.location.href = "Gemini.html";
-}
-
-else if (input.includes("news") || input.includes("twitter") || input.includes("x") || input.includes("social media") || input.includes("trending")) {
-    window.location.href = "Grok.html";
-}
-
-else if (input.includes("video") || input.includes("youtube") || input.includes("create video") || input.includes("video generator")) {
-    window.location.href = "InVideo.html";
-}
-
-else if (input.includes("chat") || input.includes("help") || input.includes("question") || input.includes("ideas") || input.includes("brainstorm")) {
-    window.location.href = "ChatGPT.html";
-}
-
-else {
-    alert("No matching AI found. Try searching for things like coding, research, video, study, maths, etc.");
-}
-
-}
 </script>
+
         <section class="separate">
         <div id = "AIList">
             <h2>Recommended AI Tools</h2>
             <ul>
                 <li>
                     <a href="claude.html">
-                     Claude 3.5 Sonnet  for Coding / Natural Writing
+                     Claude 3.5 Sonnet  for Precise Coding / Natural Writing
                     </a>
                 </li>
         
                 <li>
                     <a href="perplexity.html">
-                    Perplexity (Perplexity AI) for Web Searching
+                    Perplexity (Perplexity AI) for Web Searching / Referencing
                     </a>
                 </li>
 
                 <li>
                     <a href="Llama.html">
-                    Llama 3.1 (Meta) for Privacy / Local Host
+                    Llama 3.1 (Meta) for Privacy / Local Hosting
                     </a>
                 </li>
 
                 <li>
                     <a href="Gemini.html">
-                    Gemini 1.5 Pro (Google) for Long Context
+                    Gemini 1.5 Pro (Google) for Long Context / Large Files
                     </a>
                 </li>
 
                 <li>
                     <a href="OpenAI.html">
-                    OpenAI o1 (OpenAI) for Complex Reasoning
+                    OpenAI o1 (OpenAI) for Complex Logical Reasoning
                     </a>
                 </li>
 
                 <li>
                     <a href="Grok.html">
-                    Grok (xAI) for Social Media / Short Context
+                    Grok (xAI) for Social Media Insights / Short Context
                     </a>
                 </li>
 
                 <li>
                     <a href="Midjourney.html">
-                    Midjourney (Midjourney Inc.) for image generation
+                    Midjourney (Midjourney Inc.) for Art / Image Generation
                     </a>
                 </li>
 
@@ -132,29 +136,26 @@ else {
 
                 <li>
                     <a href="ChatGPT.html">
-                    ChatGPT (Open AI) for general use
+                    ChatGPT (Open AI) for General Use / Chatting
                     </a>
                 </li>
 
                 <li>
                     <a href="InVideo.html">
-                    InVideo AI (InVideo)  for video creation
+                    InVideo AI (InVideo) for Video Generation / Editing
                     </a>
                 </li>
             </ul>
         </div>
 
         <div id ="contact">
-            <h3>Contact Us at: </h3> <p> email: choosemyai@gmail.com</p>
-            <p id = "contact-message">Contact us if you have any questions or enquires or any ideas to make our website a better experience for you! </p>
+            <h2 style="margin: 0;">Contact Us</h2> 
+            <p><a href="mailto:choosemyai@gmail.com" id="Email">choosemyai@gmail.com</a></p>
+            <p id = "contact-message">Contact us if you have any questions, or any ideas to make our website a better experience for you! </p>
+            <p> - The ChooseMyAI Team</p>
         </div>
     
     </section>
 
-
-
-
 </body>
-</html>
-    </body>
 </html>
